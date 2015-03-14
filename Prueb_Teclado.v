@@ -18,19 +18,22 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Prueb_Teclado(
-		input clk,
-		input rst,
-		input ps2d,
-		input ps2c,
-		input EN,
-		output [7:0] code,
-		output correct
+module Recuperador_Ps2(
+		input wire clk,
+		input wire rst,
+		input wire ps2d,
+		input wire ps2c,
+		input wire EN,
+		output wire [7:0] code,
+		output wire correct,
+		output wire tick
     );
 
 wire tick_done;
 wire tick_data;
 wire [7:0] dato; 
+
+assign tick=tick_data;
 
 Get_Code_Mod Toma_Dato (
     .clk(clk), 
@@ -51,7 +54,7 @@ Protocolo_PS2 Protocolo (
     .correct(correct)
     );
 
-Reg_Data instance_name (
+Reg_Data Registro_Datos (
     .dato(dato), 
     .EN(tick_data), 
     .clk(clk), 
