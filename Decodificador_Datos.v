@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Ignacio Fernández Garita, Daniel Zamora Umaña 
 // 
 // Create Date:    17:17:00 03/12/2015 
 // Design Name: 

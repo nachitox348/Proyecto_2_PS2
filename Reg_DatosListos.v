@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Ignacio Fernández Garita, Daniel Zamora Umaña 
 // 
 // Create Date:    20:56:03 03/10/2015 
 // Design Name: 
@@ -18,12 +18,13 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+//Registro de codigos del teclado
 module Reg_DatosListos(
-		input wire [7:0] dato,
+		input wire [7:0] dato, //Dato del teclado
 		input wire EN,
 		input wire clk,
 		input wire rst,
-		output reg [7:0] dato_out
+		output reg [7:0] dato_out //Dato guardado
     );
 
 always @ (posedge clk, posedge rst)
